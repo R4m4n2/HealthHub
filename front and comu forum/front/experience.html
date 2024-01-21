@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>experience</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url('./img/4.jpg');
+              background-repeat: no-repeat;
+    background-size: cover;
+        }
+        .box{
+            width: 800px;
+            height: 600px;
+            background-color: rgba(255, 255, 255, 0.885);
+            border-radius: 20px;
+            padding: 20px;
+            margin: 50px auto;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .review{
+            margin: 0 auto;
+            width: 500px;
+            height: 300px;
+            border: 1px solid black;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .review li{
+            margin: 10px 0;
+        }
+        #fileInput{
+            display: none;
+        }
+        .label{
+            width: 100%;
+            text-align: center;
+        }
+        .ipt{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <a href="./1.html">Back</a>
+          <h1>
+            experience
+          </h1>
+          <ul class="review">
+
+          </ul>
+           <form >
+     <div class="label">
+        <label for="fileInput">Select the file you want to upload</label>
+    <button class="btn">File upload </button>
+     </div>
+    <input type="file" id="fileInput" name="fileToUpload">
+    <br><br>
+    <div class="ipt">
+         <input type="text" placeholder="Leave a message" id="text">
+    <input type="submit" value="submit" id="submit">
+    </div>
+
+
+
+
+    </div>
+   
+<script>
+    let fileInput = document.querySelector('#fileInput')
+     let range = document.querySelector('#range')
+      let btn = document.querySelector('.btn')
+       let review = document.querySelector('.review')
+       let submit = document.querySelector('#submit')
+          let text = document.querySelector('#text')
+      let arr = []
+     btn.addEventListener('click',()=>{
+        fileInput.click()
+    
+     })
+        fileInput.addEventListener('change',(e)=>{
+    
+    })
+    submit.addEventListener('click',(e)=>{
+        e.preventDefault();
+        let value =text.value
+        arr.push(value)
+        text.value=''
+        setReview()
+    })
+    function setReview (){
+
+        let html =''
+        for (let i = 0; i < arr.length; i++) {
+        
+            html+= `<li> ${arr[i]}</li>`
+        }
+        review.innerHTML=html
+    }
+</script>
+</body>
+</html>
