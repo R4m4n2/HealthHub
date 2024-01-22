@@ -1,0 +1,338 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Custom Navbar Styles */
+.custom-navbar {
+  background-color: #303841; /* Navbar background color */
+  padding: 10px 0; /* Padding for the navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Optional: Adds a shadow effect */
+  position: fixed; /* Fix the navbar to the top */
+  top: 0; /* Align to the top of the page */
+  left: 0; /* Align to the left of the page */
+  width: 100%; /* Navbar spans the entire width */
+  z-index: 1000; /* Ensure the navbar stays on top of other elements */
+}
+
+.navbar-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  color: white; /* Logo text color */
+  text-decoration: none;
+  font-size: 24px; /* Logo font size */
+  font-weight: bold;
+}
+
+.navbar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  position: relative; /* Needed for positioning the dropdown */
+}
+
+.navbar-links li {
+  margin-left: 20px; /* Space between menu items */
+}
+
+.navbar-links a {
+  color: white; /* Menu item text color */
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover,
+.navbar-links a.active {
+  color: #be3144; /* Menu item hover and active state color */
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+  display: none; /* Hide dropdown by default */
+  position: absolute; /* Position relative to the parent element */
+  background-color: #303841; /* Background color of dropdown */
+  min-width: 200px; /* Minimum width of dropdown */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Dropdown shadow */
+  z-index: 1; /* Ensure dropdown appears on top */
+  /* transition: opacity 0.5s, visibility 0.5s; Smooth transition for opacity and visibility */
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block; /* Display dropdown on hover */
+}
+
+.dropdown-item {
+  color: black; /* Text color of dropdown items */
+  padding: 12px 16px; /* Padding for dropdown items */
+  text-decoration: none; /* Remove underline from links */
+  display: block; /* Dropdown items take full width */
+}
+
+/* Dropdown Item Hover Styles */
+.dropdown-item:hover {
+  background-color: transparent !important;
+}
+
+#header-section {
+  position: relative; /* Required for absolute positioning */
+}
+
+.headerImgContainer {
+  position: relative;
+  text-align: center; /* Center-align text within the container */
+}
+
+.headerImg {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 150px;
+  width: 100%;
+  height: 5vh;
+  object-position: center 25%;
+  max-width: 2000px;
+  user-select: none;
+  object-fit: cover;
+}
+
+.title {
+  color: #303841;
+  font-size: 28px; /* Adjust to your preference */
+  font-weight: bold; /* You can use 'bold' for a stronger emphasis */
+  font-style: italic; /* Optional: Italic style for added emphasis */
+}
+
+.header-title {
+  color: #303841;
+  font-size: 24px; /* Adjust to your preference */
+  font-weight: bold; /* You can use 'bold' for a stronger emphasis */
+}
+
+.header-description {
+  color: #303841;
+  font-weight: normal; /* Use 'normal' for regular weight */
+  font-size: 18px; /* Adjust to your preference */
+  font-style: italic; /* Optional: Italic style for a lighter look */
+}
+
+.text-container {
+  position: absolute;
+  top: 35%; /* Vertically center the text container within the headerImgContainer */
+  left: 0;
+  right: 0;
+  transform: translateY(
+    -50%
+  ); /* Vertically center the text within the text container */
+  padding: 10px; /* Add padding for readability */
+  color: #fff; /* Text color */
+  max-width: 50%;
+  margin: auto;
+  text-align: center;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    1
+  ); /* Semi-transparent white background */
+}
+
+/* Category Containers */
+.category-container {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 150px;
+}
+
+/* Challenges Container */
+.challenges-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* Individual Challenge Card */
+.challenge {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 400px; /* Adjust as needed */
+  display: flex; /* Add flex display */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: space-between; /* Space between children */
+  height: auto;
+}
+
+.challenge img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.challenge img:hover {
+  transform: scale(1.1);
+}
+
+.challenge .challengeTitle {
+  /* background-color: #f7f7f7; */
+  color: #303841;
+  padding-top: 20px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.challenge .challengeInfo {
+  padding: 10px;
+  font-size: 14px;
+  color: #303841;
+  text-align: center;
+}
+
+.joinChallengeBtn {
+  width: 100%; /* Set the button width to 100% */
+  margin: 0 auto; /* Center the button horizontally */
+  padding: 10px;
+  justify-content: center;
+  align-self: center; /* Center the button */
+  background-color: #3a4750 !important;
+  border: none !important;
+}
+
+#explore-by {
+  margin-right: 250px;
+  margin-left: 250px;
+  margin-bottom: 150px;
+}
+
+.explore-title {
+  padding-bottom: 15px;
+  border-bottom: solid 1px #d3d6db;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 26px;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #303841;
+}
+
+.ul-grid {
+  padding-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: 50px;
+  row-gap: 32px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  width: 100%;
+  list-style: none;
+}
+
+.explore-images {
+  left: 0;
+  bottom: 0;
+  border-radius: 5px;
+  top: 0;
+  width: 50%;
+  object-fit: contain;
+}
+
+.list-elements {
+  margin-top: 0;
+  margin-bottom: 0;
+  position: relative;
+  list-style: none;
+  font-size: 18px;
+  text-align: center;
+  user-select: none;
+  max-width: 100%;
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+}
+
+.element-container {
+  height: 100%;
+}
+
+.category-link {
+  cursor: pointer;
+  text-decoration: none;
+  border-color: currentColor;
+  display: block;
+  height: 100%;
+  background-color: transparent;
+  text-align: center;
+}
+
+.span-flex {
+  text-align: center;
+  font-size: 0;
+  line-height: 0;
+  outline: none;
+  position: relative;
+  user-select: none;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.span-img {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin-left: -50px;
+}
+
+.span-flex img div {
+  max-width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease-in-out; /* Add a transition for opacity */
+}
+
+.span-flex:hover img {
+  opacity: 0.7; /* Reduce opacity on hover */
+}
+
+.span-flex:hover .img-description {
+  color: #be3144;
+}
+
+.img-description {
+  font-size: 26px;
+  line-height: 30px;
+  font-weight: 700;
+  padding: 10px 0 0;
+  text-align: center;
+  flex: 1;
+  color: black;
+  font-size: 20px;
+  line-height: 26px;
+  margin-left: -50px;
+}
+
+.challenge-category {
+  margin-right: 150px;
+  margin-left: 150px;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  .headerImg {
+    min-height: 300px;
+  }
+}
