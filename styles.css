@@ -11,6 +11,19 @@
 .fourth-color { 
   background: #be3144; 
 }
+/* Container to help with centering */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh; /* Adjust as needed */
+}
+
+/* Logo Styles */
+#logo {
+  width: 300px; /* Increase size as needed */
+  height: auto; /* Maintain aspect ratio */
+}
 
 /* Existing Styles */
 body {
@@ -23,7 +36,7 @@ margin: 0 auto;
 }
 
 h1, h2 {
-color: #007bff;
+color: #be3144;
 text-align: center;
 }
 
