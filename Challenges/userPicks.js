@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  updateTitleWithCurrentMonth();
   displayUserPickedChallenges();
 });
 
@@ -19,4 +20,29 @@ function displayUserPickedChallenges() {
 
     container.appendChild(challengeClone);
   });
+}
+
+function updateTitleWithCurrentMonth() {
+  const monthNames = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const currentDate = new Date();
+  const currentMonthName = monthNames[currentDate.getMonth()];
+  console.log(currentMonthName);
+
+  const titleElement = document.querySelector(".explore-title");
+  if (titleElement) {
+    titleElement.textContent += currentMonthName;
+  }
 }

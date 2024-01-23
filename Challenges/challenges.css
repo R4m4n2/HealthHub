@@ -83,7 +83,8 @@ body {
 .dropdown-menu {
   display: none; /* Hide dropdown by default */
   position: absolute; /* Position relative to the parent element */
-  background-color: #303841; /* Background color of dropdown */
+  background-color: var(--fourth-color); /* Background color of dropdown */
+  list-style: none;
   min-width: 200px; /* Minimum width of dropdown */
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Dropdown shadow */
   z-index: 1; /* Ensure dropdown appears on top */
@@ -211,7 +212,7 @@ body {
 .challenge .challengeTitle {
   /* background-color: #f7f7f7; */
   color: var(--fourth-color);
-  padding-top: 20px;
+  padding-top: 15px;
   font-size: 18px;
   text-align: center;
   font-weight: bolder;
