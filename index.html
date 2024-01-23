@@ -1,49 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website Title</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Health Hub</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body class="third-color">
-    <div class="logo-container">
-        <img src="/Logo.png" alt="Your Logo" id="logo">
-    </div>
 
-    <header>
-        <h2>A One Stop Hub To Revamp and Reshape Your Whole Life </h2>
-    </header>
-    <div class="container">
-        <!-- Example of a card -->
-        <div class="card first-color" onclick="window.location.href='/Challenges';">
-            <h2 class="second-color">BMI CALCULATOR </h2>
-            <p class="fourth-color">Brief description or tagline</p>
+<body>
+    <nav class="custom-navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-logo"><img class="logo" src="/HealthHub/Logo.png" alt=""></a>
+            <ul class="navbar-links">
+                <li><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a href="challenges.html" class="active dropdown-toggle" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Challenges
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="userPicks.html" target="_blank">My list of Challenges</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">Pricing</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <section id="header-section">
+        <div class="headerImgContainer">
+            <img class="headerImg" src="images/header.jpg" alt="Header Image">
+            <div class="text-container">
+                <h1 class="title">HealthHub Challenges</h1>
+                <h2 class="header-title">Welcome to Our Monthly Health Challenges!</h2>
+                <h3 class="header-description">
+                    Are you ready to take charge of your health and embark on a journey
+                    of positive transformation? You're in the right place! Our Monthly Health
+                    Challenges are designed to inspire, motivate, and guide you toward a
+                    healthier and happier lifestyle.
+                </h3>
+            </div>
         </div>
 
-        <!-- Repeat for other features -->
-        <div class="card first-color" onclick="window.location.href='link-to-page-2.html';">
-            <h2 class="second-color">Feature 2</h2>
-            <p class="fourth-color">Brief description or tagline</p>
-        </div>
+        <section id="explore-by">
+            <h2 class="explore-title">Our Services</h2>
+            <ul class="ul-grid">
+                <li class="list-elements">
+                    <div class="element-container">
+                        <a class="category-link" href="#fitnessChallenges">
+                            <span class="span-flex">
+                                <span class="span-img">
+                                    <img class="explore-images" src="./images/fitness-icon.png" alt="Fitness icon">
+                                </span>
+                                <div class="img-description">Fitness</div>
+                            </span>
+                        </a>
+                    </div>
+                </li>
+                <li class="list-elements">
+                    <div class="element-container">
+                        <a class="category-link" href="#fitnessChallenges">
+                            <span class="span-flex">
+                                <span class="span-img">
+                                    <img class="explore-images" src="./images/fitness-icon.png" alt="Fitness icon">
+                                </span>
+                                <div class="img-description">Fitness</div>
+                            </span>
+                        </a>
+                    </div>
+                </li>
+                <li class="list-elements">
+                    <div class="element-container">
+                        <a class="category-link" href="#nutritionChallenges">
+                            <span class="span-flex">
+                                <span class="span-img">
+                                    <img class="explore-images" src="./images/nutrition-icon.png" alt="nutrition icon">
+                                </span>
+                                <div class="img-description">Nutrition</div>
+                            </span>
+                        </a>
+                    </div>
+                </li class="list-elements">
+                <li>
+                    <div class="element-container">
+                        <a class="category-link" href="#wellnessChallenges">
+                            <span class="span-flex">
+                                <span class="span-img">
+                                    <img class="explore-images" src="./images/wellness-icon.png" alt="wellness icon">
+                                </span>
+                                <div class="img-description">Wellness</div>
+                            </span>
+                        </a>
+                    </div>
+                </li>
+                <li class="list-elements">
+                    <div class="element-container">
+                        <a class="category-link" href="#environmentalChallenges">
+                            <span class="span-flex">
+                                <span class="span-img">
+                                    <img class="explore-images" src="./images/environmental-icon.png"
+                                        alt="environmental-icon">
+                                </span>
+                                <div class="img-description">Environmental</div>
+                            </span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </section>
 
-        <div class="card first-color" onclick="window.location.href='link-to-page-2.html';">
-            <h2 class="second-color">Feature 2</h2>
-            <p class="fourth-color">Brief description or tagline</p>
-        </div>
-
-        <div class="card first-color" onclick="window.location.href='link-to-page-2.html';">
-            <h2 class="second-color">Feature 2</h2>
-            <p class="fourth-color">Brief description or tagline</p>
-        </div>
-
-        <div class="card first-color" onclick="window.location.href='link-to-page-2.html';">
-            <h2 class="second-color">Feature 2</h2>
-            <p class="fourth-color">Brief description or tagline</p>
-        </div>
-
-        <!-- Add more cards as needed -->
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
