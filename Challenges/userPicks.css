@@ -1,0 +1,190 @@
+/* New Color Scheme */
+:root {
+  /* Very light color, suitable for backgrounds, light themes, subtle borders */
+  --first-color: #f9f7f7;
+
+  /* Soft light blue, good for gentle contrasts, header/footer backgrounds, subtle highlights */
+  --second-color: #dbe2ef;
+
+  /* Medium vibrant blue, ideal for primary buttons, text links, important headings */
+  --third-color: #3f72af;
+
+  /* Dark navy blue, great for readable text, depth-creating backgrounds, strong contrasts */
+  --fourth-color: #112d4e;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--first-color);
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Custom Navbar Styles */
+.custom-navbar {
+  background-color: var(--fourth-color);
+  padding: 0.25rem 0; /* Reduced padding */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 5rem; /* Adjusted logo height */
+  width: auto;
+  margin-top: -0.5rem; /* Negative margin for vertical alignment */
+  margin-bottom: -0.5rem;
+}
+
+.navbar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  position: relative; /* Needed for positioning the dropdown */
+}
+
+.navbar-links li {
+  margin-left: 20px; /* Space between menu items */
+}
+
+.navbar-links a {
+  color: white; /* Menu item text color */
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover,
+.navbar-links a.active {
+  color: var(--third-color); /* Menu item hover and active state color */
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+  display: none; /* Hide dropdown by default */
+  position: absolute; /* Position relative to the parent element */
+  background-color: var(--fourth-color); /* Background color of dropdown */
+  min-width: 200px; /* Minimum width of dropdown */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Dropdown shadow */
+  z-index: 1; /* Ensure dropdown appears on top */
+  /* transition: opacity 0.5s, visibility 0.5s; Smooth transition for opacity and visibility */
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block; /* Display dropdown on hover */
+}
+
+.dropdown-item {
+  color: black; /* Text color of dropdown items */
+  padding: 12px 16px; /* Padding for dropdown items */
+  text-decoration: none; /* Remove underline from links */
+  display: block; /* Dropdown items take full width */
+}
+
+/* Dropdown Item Hover Styles */
+.dropdown-item:hover {
+  background-color: transparent !important;
+}
+
+.challenge-category {
+  margin-top: 200px;
+  margin-right: 150px;
+  margin-left: 150px;
+  margin-bottom: 50px;
+}
+
+.explore-title {
+  padding-bottom: 15px;
+  border-bottom: solid 1px var(--fourth-color);
+  font-size: 24px;
+  font-weight: bolder;
+  line-height: 26px;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: var(--fourth-color);
+}
+
+/* Category Containers */
+.category-container {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 150px;
+}
+
+/* Challenges Container */
+.challenges-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* Individual Challenge Card */
+.challenge {
+  border: transparent;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 400px; /* Adjust as needed */
+  display: flex; /* Add flex display */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: space-between; /* Space between children */
+  height: auto;
+  background-color: var(--second-color);
+}
+
+.challenge img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.challenge img:hover {
+  transform: scale(1.1);
+}
+
+.challenge .challengeTitle {
+  /* background-color: #f7f7f7; */
+  color: var(--fourth-color);
+  padding-top: 15px;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.challenge .challengeInfo {
+  padding: 0 10px;
+  font-size: 15px;
+  color: var(--fourth-color);
+  text-align: center;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+.category-container {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 150px;
+}

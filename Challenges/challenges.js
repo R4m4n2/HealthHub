@@ -150,7 +150,7 @@ let healthChallenges = [
         title: "Try a New Outdoor Activity",
         description:
           "Explore a new outdoor hobby to enhance your physical and mental well-being.",
-        image: "/images/outdoor-activity.jpg",
+        image: "./images/outdoor-activity.jpg",
       },
       {
         title: "Grill Healthy Meals Once a Week",
