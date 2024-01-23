@@ -3,17 +3,49 @@
 
 <head>
     <title>User's Picked Challenges</title>
-    <link rel="stylesheet" type="text/css" href="challenges.css">
+    <link rel="stylesheet" type="text/css" href="userPicks.css">
 </head>
 
 <body>
+
+    <nav class="custom-navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-logo">HealthHub</a>
+            <ul class="navbar-links">
+                <li><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a href="challenges.html" class="active dropdown-toggle" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Challenges
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="userPicks.html" target="_blank">My list of Challenges</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">Pricing</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
     <section id="pickedChallenges">
         <h1>Picked Challenges for the Month</h1>
         <div id="pickedChallengesContainer">
             <!-- Placeholder for picked challenges -->
         </div>
     </section>
-    <script src="./userPicks.js"></script>
+
+    <!-- Template for a single challenge -->
+    <template id="challengeTemplate">
+        <div class="challenge challenges-container">
+            <img class="challengeImage" src="" alt="Challenge Image">
+            <h3 class="challengeTitle"></h3>
+            <h4 class="challengeInfo"></h4>
+        </div>
+    </template>
+    <script src="userPicks.js"></script>
 </body>
 
 </html>

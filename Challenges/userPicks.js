@@ -4,29 +4,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function displayUserPickedChallenges() {
   const container = document.getElementById("pickedChallengesContainer");
+  const template = document.getElementById("challengeTemplate").content;
   const userPicks = JSON.parse(localStorage.getItem("userPicks")) || [];
 
   userPicks.forEach((challenge) => {
-    // Create elements for each challenge
-    const challengeDiv = document.createElement("div");
-    challengeDiv.className = "challenge";
+    let challengeClone = document.importNode(template, true);
 
-    const img = document.createElement("img");
-    img.src = challenge.image;
-    img.alt = "Challenge Image";
+    challengeClone.querySelector(".challengeImage").src = challenge.image;
+    challengeClone.querySelector(".challengeImage").alt = "Challenge Image";
+    challengeClone.querySelector(".challengeTitle").textContent =
+      challenge.title;
+    challengeClone.querySelector(".challengeInfo").textContent =
+      challenge.description;
 
-    const title = document.createElement("h3");
-    title.textContent = challenge.title;
-
-    const description = document.createElement("p");
-    description.textContent = challenge.description;
-
-    // Append elements to the challenge div
-    challengeDiv.appendChild(img);
-    challengeDiv.appendChild(title);
-    challengeDiv.appendChild(description);
-
-    // Append the challenge div to the container
-    container.appendChild(challengeDiv);
+    container.appendChild(challengeClone);
   });
 }

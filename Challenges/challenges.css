@@ -1,6 +1,21 @@
+/* New Color Scheme */
+:root {
+  /* Very light color, suitable for backgrounds, light themes, subtle borders */
+  --first-color: #f9f7f7;
+
+  /* Soft light blue, good for gentle contrasts, header/footer backgrounds, subtle highlights */
+  --second-color: #dbe2ef;
+
+  /* Medium vibrant blue, ideal for primary buttons, text links, important headings */
+  --third-color: #3f72af;
+
+  /* Dark navy blue, great for readable text, depth-creating backgrounds, strong contrasts */
+  --fourth-color: #112d4e;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: white;
+  background-color: var(--first-color);
   height: 100%;
   width: 100%;
   margin: 0;
@@ -10,18 +25,18 @@ body {
 
 /* Custom Navbar Styles */
 .custom-navbar {
-  background-color: #303841; /* Navbar background color */
-  padding: 10px 0; /* Padding for the navbar */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Optional: Adds a shadow effect */
-  position: fixed; /* Fix the navbar to the top */
-  top: 0; /* Align to the top of the page */
-  left: 0; /* Align to the left of the page */
-  width: 100%; /* Navbar spans the entire width */
-  z-index: 1000; /* Ensure the navbar stays on top of other elements */
+  background-color: var(--fourth-color);
+  padding: 0.25rem 0; /* Reduced padding */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .navbar-container {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -29,10 +44,15 @@ body {
 }
 
 .navbar-logo {
-  color: white; /* Logo text color */
-  text-decoration: none;
-  font-size: 24px; /* Logo font size */
-  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 5rem; /* Adjusted logo height */
+  width: auto;
+  margin-top: -0.5rem; /* Negative margin for vertical alignment */
+  margin-bottom: -0.5rem;
 }
 
 .navbar-links {
@@ -165,7 +185,7 @@ body {
 
 /* Individual Challenge Card */
 .challenge {
-  border: 1px solid #ddd;
+  border: transparent;
   border-radius: 10px;
   overflow: hidden;
   width: 400px; /* Adjust as needed */
@@ -173,6 +193,7 @@ body {
   flex-direction: column; /* Stack children vertically */
   justify-content: space-between; /* Space between children */
   height: auto;
+  background-color: var(--third-color);
 }
 
 .challenge img {
@@ -189,17 +210,20 @@ body {
 
 .challenge .challengeTitle {
   /* background-color: #f7f7f7; */
-  color: #303841;
+  color: white;
   padding-top: 20px;
   font-size: 18px;
   text-align: center;
+  font-weight: bolder;
 }
 
 .challenge .challengeInfo {
-  padding: 10px;
-  font-size: 14px;
-  color: #303841;
+  padding: 0 10px;
+  font-size: 15px;
+  color: var(--first-color);
   text-align: center;
+  font-weight: lighter;
+  font-style: italic;
 }
 
 .joinChallengeBtn {
@@ -208,7 +232,7 @@ body {
   padding: 10px;
   justify-content: center;
   align-self: center; /* Center the button */
-  background-color: #3a4750 !important;
+  background-color: var(--fourth-color) !important;
   border: none !important;
 }
 
@@ -220,9 +244,9 @@ body {
 
 .explore-title {
   padding-bottom: 15px;
-  border-bottom: solid 1px #d3d6db;
+  border-bottom: solid 1px var(--fourth-color);
   font-size: 24px;
-  font-weight: 700;
+  font-weight: bolder;
   line-height: 26px;
   margin-bottom: 0;
   margin-top: 0;
