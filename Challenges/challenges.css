@@ -76,7 +76,7 @@ body {
 
 .navbar-links a:hover,
 .navbar-links a.active {
-  color: #be3144; /* Menu item hover and active state color */
+  color: var(--third-color); /* Menu item hover and active state color */
 }
 
 /* Dropdown Menu Styles */
@@ -149,7 +149,7 @@ body {
 
 .text-container {
   position: absolute;
-  top: 35%; /* Vertically center the text container within the headerImgContainer */
+  top: 40%; /* Vertically center the text container within the headerImgContainer */
   left: 0;
   right: 0;
   transform: translateY(
@@ -193,7 +193,7 @@ body {
   flex-direction: column; /* Stack children vertically */
   justify-content: space-between; /* Space between children */
   height: auto;
-  background-color: var(--third-color);
+  background-color: var(--second-color);
 }
 
 .challenge img {
@@ -210,7 +210,7 @@ body {
 
 .challenge .challengeTitle {
   /* background-color: #f7f7f7; */
-  color: white;
+  color: var(--fourth-color);
   padding-top: 20px;
   font-size: 18px;
   text-align: center;
@@ -220,7 +220,7 @@ body {
 .challenge .challengeInfo {
   padding: 0 10px;
   font-size: 15px;
-  color: var(--first-color);
+  color: var(--fourth-color);
   text-align: center;
   font-weight: lighter;
   font-style: italic;
@@ -234,6 +234,7 @@ body {
   align-self: center; /* Center the button */
   background-color: var(--fourth-color) !important;
   border: none !important;
+  color: var(--first-color);
 }
 
 #explore-by {
@@ -250,7 +251,7 @@ body {
   line-height: 26px;
   margin-bottom: 0;
   margin-top: 0;
-  color: #303841;
+  color: var(--fourth-color);
 }
 
 .ul-grid {
