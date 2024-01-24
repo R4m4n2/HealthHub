@@ -383,17 +383,10 @@ body {
   text-align: center;
 }
 
-/* Add any additional styling to match the theme of other pages */
 
-#timer-display {
-  font-size: 24px;
-  color: #333;
-  margin-top: 20px;
-}
 
-/* Style the habit list container to allow horizontal scrolling */
-/* Style the habit list container to allow horizontal scrolling */
-/* Style the habit list container to allow horizontal scrolling */
+
+
 .habit-list-container {
   display: flex;
   overflow-x: auto;
@@ -444,3 +437,13 @@ body {
 }
 
 
+.motivational-quote-container {
+  padding: 20px;
+  margin: 0 auto;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  width: 80%;
+  background-color: #f8f9fa;
+  font-size: 1.2em;
+  color: #333;
+}
