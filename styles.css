@@ -361,3 +361,27 @@ body {
     min-height: 300px;
   }
 }
+/* Include the existing styles from your previous CSS file */
+
+#habit-tracker-section {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 60px; /* Adjust as per navbar height */
+}
+
+#habit-list {
+  margin-top: 20px;
+}
+
+.list-group-item {
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Add any additional styling to match the theme of other pages */
+
