@@ -49,6 +49,15 @@ function displayUserPickedChallenges() {
         displayCompletionImage(challengeClone);
       });
 
+    // Setup slider and its display
+    let slider = challengeClone.querySelector(".progress-slider");
+    let sliderValueDisplay = challengeClone.querySelector(".slider-value");
+
+    slider.addEventListener("input", function () {
+      let value = this.value;
+      sliderValueDisplay.textContent = value + "%";
+    });
+
     container.appendChild(challengeClone);
   });
 }

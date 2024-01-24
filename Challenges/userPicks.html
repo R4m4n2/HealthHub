@@ -37,12 +37,19 @@
         <h2 class="explore-title">Picked Challenges for </h2>
     </div>
 
+
     <!-- Template for a single challenge -->
     <template id="challengeTemplate">
         <div class="challenge">
             <img class="challengeImage" src="" alt="Challenge Image">
             <h3 class="challengeTitle"></h3>
             <h4 class="challengeInfo"></h4>
+            <!-- Progress slider with value display -->
+            <div class="progress-slider-container">
+                <span class="progress-label">Progress Tracker</span>
+                <input type="range" min="0" max="100" value="0" class="progress-slider">
+                <span class="slider-value">0%</span>
+            </div>
             <div class="button-container">
                 <button class="btn btn-success completeChallengeBtn">Challenge Completed</button>
                 <button class="btn btn-warning leaveChallengeBtn">Leave Challenge</button>

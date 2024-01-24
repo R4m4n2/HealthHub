@@ -237,3 +237,29 @@ body {
   margin-left: auto;
   margin-bottom: 150px;
 }
+
+.progress-slider-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.progress-label {
+  flex: 0 0 auto; /* Do not grow or shrink, keep original size */
+  margin-right: 15px; /* Space between label and slider */
+  margin-left: 15px;
+  font-weight: lighter;
+  font-size: 15px;
+}
+
+.progress-slider {
+  flex: 1 1 auto; /* Grow to fill available space, but keep its intrinsic size */
+  margin-right: 5px; /* Space between slider and value */
+}
+
+.slider-value {
+  flex: 0 0 auto; /* Do not grow or shrink, keep original size */
+  min-width: 30px;
+  text-align: center;
+  color: var(--fourth-color);
+}
