@@ -194,7 +194,42 @@ body {
 .leaveChallengeBtn,
 .completeChallengeBtn {
   flex: 1; /* Each button takes up equal space */
-  margin: 0 5px; /* Add margin for spacing between buttons */
+  margin: 5px 5px 10px; /* Add margin for spacing between buttons */
+}
+
+/* Style for Challenge Completed Button */
+.completeChallengeBtn {
+  background-color: var(--fourth-color); /* Green color */
+  color: var(--first-color); /* White text */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  font-weight: lighter; /* Bold text */
+  display: block; /* Display as a block for proper margin application */
+  cursor: pointer; /* Cursor changes to pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  margin: 5px;
+}
+
+.completeChallengeBtn:hover {
+  background-color: #004fa9;
+}
+
+/* Style for Leave Challenge Button */
+.leaveChallengeBtn {
+  background-color: #be3144; /* Yellow color */
+  color: var(--first-color);
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  font-weight: lighter; /* Bold text */
+  display: block; /* Display as a block for proper margin application */
+  cursor: pointer; /* Cursor changes to pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  margin: 5px;
+}
+
+.leaveChallengeBtn:hover {
+  background-color: #e0142f; /* Darker yellow on hover */
+  color: var(--first-color);
 }
 
 .category-container {

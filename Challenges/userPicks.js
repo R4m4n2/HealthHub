@@ -5,13 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
     .getElementById("pickedChallengesContainer")
     .addEventListener("click", function (e) {
       if (e.target && e.target.matches(".leaveChallengeBtn")) {
-        const challengeElement = e.target.closest(".challenge");
-        const challengeTitle =
-          challengeElement.querySelector(".challengeTitle").textContent;
-        removeChallengeFromLocalStorage(challengeTitle);
-        challengeElement.remove();
+        displayLeavingImage(e.target.closest(".challenge")); // Call displayLeavingImage for leave button
       } else if (e.target && e.target.matches(".completeChallengeBtn")) {
-        displayCompletionImage(e.target.closest(".challenge"));
+        displayCompletionImage(e.target.closest(".challenge")); // Call displayCompletionImage for complete button
       }
     });
 });
@@ -64,8 +60,8 @@ function displayCompletionImage(challengeElement) {
 
   const completionImage = document.createElement("img");
   completionImage.src = "./images/completed.png"; // Replace with your completion image path
-  completionImage.style.width = "300px";
-  completionImage.style.maxHeight = "300px";
+  completionImage.style.width = "200px";
+  completionImage.style.maxHeight = "200px";
   // Update card styling for image display
   challengeElement.style.border = "none";
   challengeElement.style.padding = "0";
@@ -76,6 +72,32 @@ function displayCompletionImage(challengeElement) {
   challengeElement.appendChild(completionImage);
 
   // Remove image after 1 second and the challenge element
+  setTimeout(() => {
+    challengeElement.remove();
+    removeChallengeFromLocalStorage(challengeTitle);
+  }, 1000);
+}
+
+function displayLeavingImage(challengeElement) {
+  // Get the challenge title before clearing the content
+  const challengeTitle =
+    challengeElement.querySelector(".challengeTitle").textContent;
+
+  const leavingImage = document.createElement("img");
+  leavingImage.src = "./images/exit.png"; // Replace with your leaving image path
+  leavingImage.style.width = "200px";
+  leavingImage.style.maxHeight = "200px";
+
+  // Update card styling for image display
+  challengeElement.style.border = "none";
+  challengeElement.style.padding = "0";
+  challengeElement.style.justifyContent = "center";
+  challengeElement.style.alignItems = "center";
+  challengeElement.style.backgroundColor = "transparent";
+  challengeElement.innerHTML = ""; // Clear the challenge content
+  challengeElement.appendChild(leavingImage);
+
+  // Remove image and challenge element after 1 second
   setTimeout(() => {
     challengeElement.remove();
     removeChallengeFromLocalStorage(challengeTitle);
