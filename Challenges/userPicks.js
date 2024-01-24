@@ -40,6 +40,8 @@ function displayUserPickedChallenges() {
       .querySelector(".leaveChallengeBtn")
       .addEventListener("click", function () {
         container.removeChild(challengeClone);
+        // Clear the saved progress for this challenge
+        localStorage.removeItem(challenge.title + "-progress");
       });
 
     // Event listener for challenge complete button
@@ -47,17 +49,28 @@ function displayUserPickedChallenges() {
       .querySelector(".completeChallengeBtn")
       .addEventListener("click", function () {
         displayCompletionImage(challengeClone);
+        // Clear the saved progress for this challenge
+        localStorage.removeItem(challenge.title + "-progress");
       });
 
     // Setup slider and its display
     let slider = challengeClone.querySelector(".progress-slider");
     let sliderValueDisplay = challengeClone.querySelector(".slider-value");
 
+    // Retrieve and set the saved slider value
+    const savedValue = localStorage.getItem(challenge.title + "-progress");
+    if (savedValue) {
+      slider.value = savedValue;
+      sliderValueDisplay.textContent = savedValue + "%";
+    }
+
     slider.addEventListener("input", function () {
       let value = this.value;
       sliderValueDisplay.textContent = value + "%";
-    });
 
+      // Save the slider value to localStorage
+      localStorage.setItem(challenge.title + "-progress", value);
+    });
     container.appendChild(challengeClone);
   });
 }
