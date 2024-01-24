@@ -1,7 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
   updateTitleWithCurrentMonth();
   displayUserPickedChallenges();
+  document
+    .getElementById("pickedChallengesContainer")
+    .addEventListener("click", function (e) {
+      if (e.target && e.target.matches(".leaveChallengeBtn")) {
+        const challengeElement = e.target.closest(".challenge");
+        const challengeTitle =
+          challengeElement.querySelector(".challengeTitle").textContent;
+        removeChallengeFromLocalStorage(challengeTitle);
+        challengeElement.remove();
+      } else if (e.target && e.target.matches(".completeChallengeBtn")) {
+        displayCompletionImage(e.target.closest(".challenge"));
+      }
+    });
 });
+
+function removeChallengeFromLocalStorage(challengeTitle) {
+  let userPicks = JSON.parse(localStorage.getItem("userPicks")) || [];
+  userPicks = userPicks.filter(
+    (challenge) => challenge.title !== challengeTitle
+  );
+  localStorage.setItem("userPicks", JSON.stringify(userPicks));
+}
 
 function displayUserPickedChallenges() {
   const container = document.getElementById("pickedChallengesContainer");
@@ -18,8 +39,53 @@ function displayUserPickedChallenges() {
     challengeClone.querySelector(".challengeInfo").textContent =
       challenge.description;
 
+    // Event listener for leave challenge button
+    challengeClone
+      .querySelector(".leaveChallengeBtn")
+      .addEventListener("click", function () {
+        container.removeChild(challengeClone);
+      });
+
+    // Event listener for challenge complete button
+    challengeClone
+      .querySelector(".completeChallengeBtn")
+      .addEventListener("click", function () {
+        displayCompletionImage(challengeClone);
+      });
+
+    // Initialize progress bar
+    const progressBar = challengeClone.querySelector(".progress-bar");
+    progressBar.style.width = getChallengeProgress(challenge.title) + "%";
+
     container.appendChild(challengeClone);
   });
+
+  // Function to get the progress percentage of a challenge
+  function getChallengeProgress(challengeTitle) {
+    // Logic to determine the progress of a challenge
+    // This can be a static value or calculated based on user actions.
+    // For example, return 50 for 50% progress.
+    // You should replace this with your actual logic to get the progress.
+    return 50; // Placeholder value
+  }
+}
+
+function displayCompletionImage(challengeElement) {
+  // Get the challenge title before clearing the content
+  const challengeTitle =
+    challengeElement.querySelector(".challengeTitle").textContent;
+
+  const completionImage = document.createElement("img");
+  completionImage.src = "./images/completed.png"; // Replace with your completion image path
+  completionImage.style.width = "100%";
+  challengeElement.innerHTML = ""; // Clear the challenge content
+  challengeElement.appendChild(completionImage);
+
+  // Remove image after 1 second and the challenge element
+  setTimeout(() => {
+    challengeElement.remove();
+    removeChallengeFromLocalStorage(challengeTitle);
+  }, 1000);
 }
 
 function updateTitleWithCurrentMonth() {
