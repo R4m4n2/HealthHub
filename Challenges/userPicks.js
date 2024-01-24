@@ -53,21 +53,8 @@ function displayUserPickedChallenges() {
         displayCompletionImage(challengeClone);
       });
 
-    // Initialize progress bar
-    const progressBar = challengeClone.querySelector(".progress-bar");
-    progressBar.style.width = getChallengeProgress(challenge.title) + "%";
-
     container.appendChild(challengeClone);
   });
-
-  // Function to get the progress percentage of a challenge
-  function getChallengeProgress(challengeTitle) {
-    // Logic to determine the progress of a challenge
-    // This can be a static value or calculated based on user actions.
-    // For example, return 50 for 50% progress.
-    // You should replace this with your actual logic to get the progress.
-    return 50; // Placeholder value
-  }
 }
 
 function displayCompletionImage(challengeElement) {
@@ -77,7 +64,14 @@ function displayCompletionImage(challengeElement) {
 
   const completionImage = document.createElement("img");
   completionImage.src = "./images/completed.png"; // Replace with your completion image path
-  completionImage.style.width = "100%";
+  completionImage.style.width = "300px";
+  completionImage.style.maxHeight = "300px";
+  // Update card styling for image display
+  challengeElement.style.border = "none";
+  challengeElement.style.padding = "0";
+  challengeElement.style.justifyContent = "center";
+  challengeElement.style.alignItems = "center";
+  challengeElement.style.backgroundColor = "transparent";
   challengeElement.innerHTML = ""; // Clear the challenge content
   challengeElement.appendChild(completionImage);
 
