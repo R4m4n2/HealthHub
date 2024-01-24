@@ -361,3 +361,79 @@ body {
     min-height: 300px;
   }
 }
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+/* BMI Calculator Styles */
+#bmi-calculator-section {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+#bmi-result-container {
+  margin-top: 20px;
+}
+
+#bmi-result-text {
+  font-size: 18px;
+  color: #333;
+}
+
+#bmi-spectrum {
+  display: flex;
+  height: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.bmi-range {
+  flex: 1;
+}
+
+.underweight {
+  background-color: #FFD54F;
+}
+
+.normal {
+  background-color: #4CAF50;
+}
+
+.overweight {
+  background-color: #FFB74D;
+}
+
+.obese {
+  background-color: #E57373;
+}
+
+.bmi-pointer {
+  position: absolute;
+  width: 5px;
+  height: 30px;
+  background-color: #000; /* Pointer color */
+  border-radius: 50%;
+  z-index: 2; /* Make sure it's above the ranges */
+}
+
+
+
+/* Add additional styles as needed */
