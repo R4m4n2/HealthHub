@@ -15,6 +15,7 @@
         </div>
     </nav>
 
+  
     <section id="header-section" class="text-center">
         <div class="headerImgContainer">
             <img class="headerImg" src="/images/Cover.png" alt="Header Image">
@@ -25,31 +26,28 @@
                 </p>
             </div>
         </div>
-    </section>
-
-    <section id="habit-tracker-section" class="container mt-4">
-        <div class="row">
-            <div class="col-md-12">
-                <h2>Create a New Habit</h2>
-                <form id="habit-form">
-                    <div class="mb-3">
-                        <label for="habit-title" class="form-label">Habit Title:</label>
-                        <input type="text" class="form-control" id="habit-title" placeholder="Enter habit" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Start Tracking</button>
-                </form>
-            </div>
-        </div>
-
-        <div class="row mt-4">
-            <div class="col-md-12">
-                <h2>Your Habits</h2>
-                <ul id="habit-list" class="list-group">
-                    <!-- Habit items will be added here -->
-                </ul>
-            </div>
-        </div>
-    </section>
+        <section id="habit-tracker-section" class="container mt-4">
+          <div class="row">
+              <div class="col-md-12">
+                  <h2>Create a New Habit</h2>
+                  <form id="habit-form">
+                      <div class="mb-3">
+                          <label for="habit-title" class="form-label">Habit Title:</label>
+                          <input type="text" class="form-control" id="habit-title" placeholder="Enter habit" required>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Start Tracking</button>
+                  </form>
+              </div>
+          </div>
+      </section>
+      
+      <section id="habit-list-section" class="container mt-4">
+        <div id="habit-list" class="habit-list-container">
+          <!-- Habit cards will be added here -->
+      </div>
+      
+      </section>
+      
 
     <script src="habitTracker.js"></script>
 </body>

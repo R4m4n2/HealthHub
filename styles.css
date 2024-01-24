@@ -367,7 +367,7 @@ body {
   background-color: #f4f4f4;
   padding: 20px;
   border-radius: 8px;
-  margin-top: 60px; /* Adjust as per navbar height */
+  margin-top: 30px; /* Adjust as per navbar height */
 }
 
 #habit-list {
@@ -384,4 +384,63 @@ body {
 }
 
 /* Add any additional styling to match the theme of other pages */
+
+#timer-display {
+  font-size: 24px;
+  color: #333;
+  margin-top: 20px;
+}
+
+/* Style the habit list container to allow horizontal scrolling */
+/* Style the habit list container to allow horizontal scrolling */
+/* Style the habit list container to allow horizontal scrolling */
+.habit-list-container {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* Style the habit cards */
+.habit-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  min-width: 200px; /* Set a minimum width for each card */
+  margin-right: 20px; /* Add spacing between cards */
+  display: inline-block; /* Display the cards horizontally */
+  margin-bottom: 20px; /* Add spacing below each card */
+}
+
+/* Style the circular timer within the habit card */
+
+
+/* Style the circular timer within the habit card */
+/* Style the circular timer within the habit card */
+.habit-timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.habit-timer {
+  width: 80px; /* Set the width and height for the circular timer */
+  height: 80px;
+  border: 3px solid #3498db; /* Border color for the timer */
+  border-radius: 50%; /* Make it round */
+  text-align: center;
+  line-height: 80px; /* Center the text vertically */
+  font-weight: bold;
+  font-size: 1.2em;
+  position: relative; /* Add position:relative */
+  overflow: hidden; /* Hide overflow for the timer */
+}
+
+.timer-number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 
