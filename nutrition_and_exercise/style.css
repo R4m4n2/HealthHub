@@ -105,7 +105,7 @@ body{
     font-weight: 400;
     font-size: x-large;
     text-align: center;
-    background-color: var(--second-color);
+    background-color: var(--first-color);
     padding: 0 1rem;
 }
 
