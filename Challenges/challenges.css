@@ -228,11 +228,10 @@ body {
 }
 
 .joinChallengeBtn {
-  width: 100%; /* Set the button width to 100% */
-  margin: 0 auto; /* Center the button horizontally */
+  width: 90%; /* Adjusted button width */
+  margin: 5px auto 10px; /* 5px top, auto horizontal, 10px bottom */
   padding: 10px;
-  justify-content: center;
-  align-self: center; /* Center the button */
+  display: block; /* This will help with horizontal centering */
   background-color: var(--fourth-color) !important;
   border: none !important;
   color: var(--first-color);

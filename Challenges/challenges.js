@@ -224,6 +224,7 @@ function populateCategoryChallenges(categoryName, containerId) {
     const joinBtn = challengeClone.querySelector(".joinChallengeBtn");
     joinBtn.addEventListener("click", function () {
       this.textContent = "Added to Monthly Challenges";
+      this.style.setProperty("background-color", "#be3144", "important");
       addChallengeToUserPicks(challenge);
     });
 
