@@ -361,89 +361,79 @@ body {
     min-height: 300px;
   }
 }
-/* Include the existing styles from your previous CSS file */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-#habit-tracker-section {
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+/* BMI Calculator Styles */
+#bmi-calculator-section {
   background-color: #f4f4f4;
   padding: 20px;
   border-radius: 8px;
-  margin-top: 30px; /* Adjust as per navbar height */
 }
 
-#habit-list {
+#bmi-result-container {
   margin-top: 20px;
 }
 
-.list-group-item {
-  margin-bottom: 10px;
-  border-radius: 5px;
-}
-
-.text-center {
-  text-align: center;
-}
-
-
-
-
-
-.habit-list-container {
-  display: flex;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-/* Style the habit cards */
-.habit-card {
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 5px;
-  min-width: 200px; /* Set a minimum width for each card */
-  margin-right: 20px; /* Add spacing between cards */
-  display: inline-block; /* Display the cards horizontally */
-  margin-bottom: 20px; /* Add spacing below each card */
-}
-
-/* Style the circular timer within the habit card */
-
-
-/* Style the circular timer within the habit card */
-/* Style the circular timer within the habit card */
-.habit-timer-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.habit-timer {
-  width: 80px; /* Set the width and height for the circular timer */
-  height: 80px;
-  border: 3px solid #3498db; /* Border color for the timer */
-  border-radius: 50%; /* Make it round */
-  text-align: center;
-  line-height: 80px; /* Center the text vertically */
-  font-weight: bold;
-  font-size: 1.2em;
-  position: relative; /* Add position:relative */
-  overflow: hidden; /* Hide overflow for the timer */
-}
-
-.timer-number {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
-.motivational-quote-container {
-  padding: 20px;
-  margin: 0 auto;
-  border: 2px solid #007bff;
-  border-radius: 5px;
-  width: 80%;
-  background-color: #f8f9fa;
-  font-size: 1.2em;
+#bmi-result-text {
+  font-size: 18px;
   color: #333;
 }
+
+#bmi-spectrum {
+  display: flex;
+  height: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.bmi-range {
+  flex: 1;
+}
+
+.underweight {
+  background-color: #FFD54F;
+}
+
+.normal {
+  background-color: #4CAF50;
+}
+
+.overweight {
+  background-color: #FFB74D;
+}
+
+.obese {
+  background-color: #E57373;
+}
+
+.bmi-pointer {
+  position: absolute;
+  width: 5px;
+  height: 30px;
+  background-color: #000; /* Pointer color */
+  border-radius: 50%;
+  z-index: 2; /* Make sure it's above the ranges */
+}
+
+
+
+/* Add additional styles as needed */
