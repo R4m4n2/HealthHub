@@ -1,5 +1,5 @@
 function fetchUserPickedChallenges() {
-  const userId = "userId"; // Replace with actual user ID
+  const userId = "userId";
   const userPicksRef = firebase.database().ref("userPicks/" + userId);
 
   userPicksRef
@@ -31,15 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// Replaced with a firebase version
-// function removeChallengeFromLocalStorage(challengeTitle) {
-//   let userPicks = JSON.parse(localStorage.getItem("userPicks")) || [];
-//   userPicks = userPicks.filter(
-//     (challenge) => challenge.title !== challengeTitle
-//   );
-//   localStorage.setItem("userPicks", JSON.stringify(userPicks));
-// }
-
 function removeChallengeFromUserPicks(challengeTitle) {
   const userId = "userId"; // Replace with actual user ID
   const userPicksRef = firebase.database().ref("userPicks/" + userId);
@@ -59,7 +50,8 @@ function removeChallengeFromUserPicks(challengeTitle) {
       console.error(error);
     });
 }
-// Safe removal function
+// safely remove a child element from its parent in the DOM (Document Object Model).
+// prevents errors that could occur if you try to remove an element that doesn’t exist or isn’t a child of the specified parent.
 function safelyRemoveElement(parent, child) {
   if (parent && child && parent.contains(child)) {
     parent.removeChild(child);
@@ -171,7 +163,7 @@ function displayLeavingImage(challengeElement) {
     challengeElement.querySelector(".challengeTitle").textContent;
 
   const leavingImage = document.createElement("img");
-  leavingImage.src = "./images/exit.png"; // Replace with your leaving image path
+  leavingImage.src = "./images/exit.png";
   leavingImage.style.width = "200px";
   leavingImage.style.maxHeight = "200px";
 

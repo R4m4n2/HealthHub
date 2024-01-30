@@ -185,14 +185,6 @@ let healthChallenges = [
   },
 ];
 
-var motivationalQuotes = [
-  "Believe you can and you're halfway there.",
-  "The only way to achieve the impossible is to believe it is possible.",
-  "It does not matter how slowly you go as long as you do not stop.",
-  "You are never too old to set another goal or to dream a new dream.",
-  "Do what you can with all you have, wherever you are.",
-];
-
 document.addEventListener("DOMContentLoaded", () => {
   updateMonthlyChallenges();
   populateCategoryChallenges("Fitness", "fitnessChallengesContainer");
@@ -232,7 +224,7 @@ function populateCategoryChallenges(categoryName, containerId) {
 }
 
 function addChallengeToUserPicks(challenge) {
-  const userId = "userId"; // Replace with actual user ID
+  const userId = "userId";
   const userPicksRef = firebase.database().ref("userPicks/" + userId);
 
   userPicksRef
@@ -254,7 +246,6 @@ function addChallengeToUserPicks(challenge) {
 }
 
 // Two random monthly challenges Section
-
 function updateMonthlyChallenges() {
   const currentDate = new Date();
   const monthNames = [
@@ -295,13 +286,13 @@ function updateMonthlyChallenges() {
 }
 
 function selectRandomChallenges(number) {
-  const allChallenges = healthChallenges.flatMap((cat) => cat.challenges);
+  const allChallenges = healthChallenges.flatMap((cat) => cat.challenges); //flatMap is used to flatten the structure into a single array
   let selected = [];
   while (selected.length < number) {
     let randomChallenge =
       allChallenges[Math.floor(Math.random() * allChallenges.length)];
     if (
-      !selected.some((challenge) => challenge.title === randomChallenge.title)
+      !selected.some((challenge) => challenge.title === randomChallenge.title) //Checks if randomly selected challenge is already in the selected array
     ) {
       selected.push(randomChallenge);
     }
