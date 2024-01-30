@@ -1,15 +1,7 @@
-/* New Color Scheme */
 :root {
-  /* Very light color, suitable for backgrounds, light themes, subtle borders */
   --first-color: #f9f7f7;
-
-  /* Soft light blue, good for gentle contrasts, header/footer backgrounds, subtle highlights */
   --second-color: #dbe2ef;
-
-  /* Medium vibrant blue, ideal for primary buttons, text links, important headings */
   --third-color: #3f72af;
-
-  /* Dark navy blue, great for readable text, depth-creating backgrounds, strong contrasts */
   --fourth-color: #112d4e;
 }
 
@@ -23,10 +15,9 @@ body {
   box-sizing: border-box;
 }
 
-/* Custom Navbar Styles */
 .custom-navbar {
   background-color: var(--fourth-color);
-  padding: 0.25rem 0; /* Reduced padding */
+  padding: 0.25rem 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   position: fixed;
   top: 0;
@@ -49,9 +40,9 @@ body {
 }
 
 .logo {
-  height: 5rem; /* Adjusted logo height */
+  height: 5rem;
   width: auto;
-  margin-top: -0.5rem; /* Negative margin for vertical alignment */
+  margin-top: -0.5rem;
   margin-bottom: -0.5rem;
 }
 
@@ -60,15 +51,15 @@ body {
   padding: 0;
   margin: 0;
   display: flex;
-  position: relative; /* Needed for positioning the dropdown */
+  position: relative;
 }
 
 .navbar-links li {
-  margin-left: 20px; /* Space between menu items */
+  margin-left: 20px;
 }
 
 .navbar-links a {
-  color: white; /* Menu item text color */
+  color: white;
   text-decoration: none;
   padding: 5px 10px;
   transition: color 0.3s;
@@ -76,34 +67,7 @@ body {
 
 .navbar-links a:hover,
 .navbar-links a.active {
-  color: var(--third-color); /* Menu item hover and active state color */
-}
-
-/* Dropdown Menu Styles */
-.dropdown-menu {
-  display: none; /* Hide dropdown by default */
-  position: absolute; /* Position relative to the parent element */
-  background-color: var(--fourth-color); /* Background color of dropdown */
-  min-width: 200px; /* Minimum width of dropdown */
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Dropdown shadow */
-  z-index: 1; /* Ensure dropdown appears on top */
-  /* transition: opacity 0.5s, visibility 0.5s; Smooth transition for opacity and visibility */
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block; /* Display dropdown on hover */
-}
-
-.dropdown-item {
-  color: black; /* Text color of dropdown items */
-  padding: 12px 16px; /* Padding for dropdown items */
-  text-decoration: none; /* Remove underline from links */
-  display: block; /* Dropdown items take full width */
-}
-
-/* Dropdown Item Hover Styles */
-.dropdown-item:hover {
-  background-color: transparent !important;
+  color: var(--third-color);
 }
 
 .challenge-category {
@@ -145,10 +109,10 @@ body {
   border: transparent;
   border-radius: 10px;
   overflow: hidden;
-  width: 400px; /* Adjust as needed */
-  display: flex; /* Add flex display */
-  flex-direction: column; /* Stack children vertically */
-  justify-content: space-between; /* Space between children */
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: auto;
   background-color: var(--second-color);
 }
@@ -183,30 +147,27 @@ body {
   font-style: italic;
 }
 
-/* Style for button container */
 .button-container {
   display: flex;
-  justify-content: space-between; /* Distribute space between buttons */
-  padding: 10px; /* Add some padding */
+  justify-content: space-between;
+  padding: 10px;
 }
 
-/* You might need to adjust the padding/margins for the buttons themselves */
 .leaveChallengeBtn,
 .completeChallengeBtn {
-  flex: 1; /* Each button takes up equal space */
-  margin: 5px 5px 10px; /* Add margin for spacing between buttons */
+  flex: 1;
+  margin: 5px 5px 10px;
 }
 
-/* Style for Challenge Completed Button */
 .completeChallengeBtn {
-  background-color: var(--fourth-color); /* Green color */
-  color: var(--first-color); /* White text */
-  border: none; /* Remove border */
-  border-radius: 5px; /* Rounded corners */
-  font-weight: lighter; /* Bold text */
-  display: block; /* Display as a block for proper margin application */
-  cursor: pointer; /* Cursor changes to pointer on hover */
-  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  background-color: var(--fourth-color);
+  color: var(--first-color);
+  border: none;
+  border-radius: 5px;
+  font-weight: lighter;
+  display: block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
   margin: 5px;
 }
 
@@ -214,21 +175,20 @@ body {
   background-color: #004fa9;
 }
 
-/* Style for Leave Challenge Button */
 .leaveChallengeBtn {
-  background-color: #be3144; /* Yellow color */
+  background-color: #be3144;
   color: var(--first-color);
-  border: none; /* Remove border */
-  border-radius: 5px; /* Rounded corners */
-  font-weight: lighter; /* Bold text */
-  display: block; /* Display as a block for proper margin application */
-  cursor: pointer; /* Cursor changes to pointer on hover */
-  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  border: none;
+  border-radius: 5px;
+  font-weight: lighter;
+  display: block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
   margin: 5px;
 }
 
 .leaveChallengeBtn:hover {
-  background-color: #e0142f; /* Darker yellow on hover */
+  background-color: #e0142f;
   color: var(--first-color);
 }
 
@@ -245,20 +205,20 @@ body {
 }
 
 .progress-label {
-  flex: 0 0 auto; /* Do not grow or shrink, keep original size */
-  margin-right: 15px; /* Space between label and slider */
+  flex: 0 0 auto;
+  margin-right: 15px;
   margin-left: 15px;
   font-weight: lighter;
   font-size: 15px;
 }
 
 .progress-slider {
-  flex: 1 1 auto; /* Grow to fill available space, but keep its intrinsic size */
-  margin-right: 5px; /* Space between slider and value */
+  flex: 1 1 auto;
+  margin-right: 5px;
 }
 
 .slider-value {
-  flex: 0 0 auto; /* Do not grow or shrink, keep original size */
+  flex: 0 0 auto;
   min-width: 30px;
   text-align: center;
   color: var(--fourth-color);
