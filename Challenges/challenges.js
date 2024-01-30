@@ -1,4 +1,3 @@
-//Objects
 let healthChallenges = [
   {
     category: "Fitness",
@@ -233,11 +232,25 @@ function populateCategoryChallenges(categoryName, containerId) {
 }
 
 function addChallengeToUserPicks(challenge) {
-  let userPicks = JSON.parse(localStorage.getItem("userPicks")) || [];
-  if (!userPicks.some((ch) => ch.title === challenge.title)) {
-    userPicks.push(challenge);
-    localStorage.setItem("userPicks", JSON.stringify(userPicks));
-  }
+  const userId = "userId"; // Replace with actual user ID
+  const userPicksRef = firebase.database().ref("userPicks/" + userId);
+
+  userPicksRef
+    .once("value")
+    .then((snapshot) => {
+      let userPicks = [];
+      if (snapshot.exists()) {
+        userPicks = snapshot.val() || [];
+      }
+
+      if (!userPicks.some((ch) => ch.title === challenge.title)) {
+        userPicks.push(challenge);
+        userPicksRef.set(userPicks);
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+    });
 }
 
 // Two random monthly challenges Section
